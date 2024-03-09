@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>001-JS体验</title>
+    <style>
+        .aqua{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+
+<button class="aqua">按钮1</button>
+<button>按钮2</button>
+<button>按钮3</button>
+<button>按钮4</button>
+
+<script>
+    let bts = document.querySelectorAll("button")
+    for (let i = 0; i < bts.length; i++){
+        bts[i].addEventListener("click",function () {
+            document.querySelector(".aqua").className = ""
+            this.className = "aqua"
+        })
+    }
+</script>
+
+</body>
+</html>
